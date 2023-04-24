@@ -1,0 +1,28 @@
+from tkinter import *
+from tkinter import messagebox
+def fun_1(event):
+    messagebox.showinfo("GUI Python", entry.get()+' '+entry_1.get()+' '+entry_2.get()+' '+entry_3.get())
+root=Tk()
+root.geometry('300x300')
+root['bg']='gray90'
+root.title('GUI на Python')
+label=Label(root,text='Введите имя:',bg='gray90',fg='black',font='Times 12')
+label.place(x=0,y=0)
+label_1=Label(root,text='Введите фамилию:',bg='gray90',fg='black',font='Times 12')
+label_1.place(x=0,y=40)
+label_2=Label(root,text='Введите курс:',bg='gray90',fg='black',font='Times 12')
+label_2.place(x=0,y=80)
+label_3=Label(root,text='Введите специальность:',bg='gray90',fg='black',font='Times 12')
+label_3.place(x=0,y=120)
+entry=Entry(root,bg='white',width=15,font='Times 12')
+entry.place(x=170,y=0)
+entry_1=Entry(root,bg='white',width=15,font='Times 12')
+entry_1.place(x=170,y=40)
+entry_2=Entry(root,bg='white',width=15,font='Times 12')
+entry_2.place(x=170,y=80)
+entry_3=Entry(root,bg='white',width=15,font='Times 12')
+entry_3.place(x=170,y=120)
+but=Button(root,width=8,height=1,text='Click Me',font='Times 10',fg='Black',background='gray90')
+but.place(x=230,y=155)
+but.bind('<Button-1>',fun_1)
+root.mainloop()
